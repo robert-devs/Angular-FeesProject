@@ -21,29 +21,26 @@ export class StudentsComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form);
-    
+
     // if (this.name === '' || this.gender === '') {
     //   // this.empty = true;
     //   setTimeout(() => {
     //     this.empty = false;
     //   }, 1000);
     // } else {
-      this.studentService.addStudent({
-        name: this.name,
-        gender: this.gender,
-        age: this.age,
-        fees: this.fees,
-      })
+    this.studentService.addStudent({
+      name: this.name,
+      gender: this.gender,
+      age: this.age,
+      fees: this.fees,
+    });
 
-      this.name = '';
-      this.gender = '';
-      this.age = 0;
-      this.fees = 0;
+    this.name = '';
+    this.gender = '';
+    this.age = 0;
+    this.fees = 0;
     // }
-
-    
   }
-
 
   ngOnInit(): void {}
 }

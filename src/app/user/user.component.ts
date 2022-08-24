@@ -12,10 +12,7 @@ import { StudentsService } from '../Services/Students.service';
 export class UserComponent implements OnInit {
   @Input() student!: Student[];
 
-  constructor(
-    private studentService: StudentsService,
-    private router: Router
-  ) {}
+  constructor(public studentService: StudentsService, private router: Router) {}
 
   ngOnInit(): void {
     this.student = this.studentService.getStudent();
