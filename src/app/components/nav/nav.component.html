@@ -1,0 +1,16 @@
+<div [ngStyle]="{ 'background-color': 'aqua', color: ' #ff5e7d ', height: '80px', display:'flex', alignItems:'center' }">
+  <div [ngClass]="getStyle()">
+    <div class="LOGO">
+      <h4 [ngStyle]="{fontStyle:'italic'}">THE JITU</h4>
+    </div>
+
+    <div class="list">
+      <ul [ngClass]="getDisplay()">
+        <li routerLink="/">Home</li>
+        <li routerLink="/user">Users</li>
+        <li routerLink="/login" *ngIf="!userservice.isAuthenticated">Login</li>
+        <li *ngIf="userservice.isAuthenticated" (click) ="logoutUser()">Logout</li>
+      </ul>
+    </div>
+  </div>
+</div>

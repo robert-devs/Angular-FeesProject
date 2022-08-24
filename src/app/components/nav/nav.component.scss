@@ -1,0 +1,17 @@
+.display{
+    font-size: 30px;
+    display: flex;
+   
+    
+    justify-content: space-evenly;
+    max-width: 1024px;
+    margin: auto;
+    width: 100%;
+
+}
+
+.style{
+ display: flex;
+ list-style: none;
+  gap: 2rem;
+}

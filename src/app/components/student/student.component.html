@@ -1,0 +1,25 @@
+<form ngNativeValidate #addStudentForm="ngForm" (ngSubmit)="onSubmit(addStudentForm)" class="add-student-form">
+  <h3>Add student</h3>
+
+  
+  <div class="input">
+    <label>Student Name</label>
+    <input name="name" [(ngModel)]="name" required minlength="5" />
+  </div>
+  <div class="input">
+    <label>Gender</label>
+    <select name="gender" [(ngModel)]="gender"  required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="input">
+    <label>age</label>
+    <input name="age" type="number" required min="18" [(ngModel)]="age" id="" />
+  </div>
+  <div class="input">
+    <label>fees</label>
+    <input name="fees" type="number" required (ngModel)="fees" />
+  </div>
+  <button class="add-student-btn">Add</button>
+</form>

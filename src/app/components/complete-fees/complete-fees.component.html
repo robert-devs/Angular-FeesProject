@@ -1,0 +1,28 @@
+<div class="students" *ngIf="students.length; else noStudent">
+
+  <div>
+    <div class="display">
+      <div class="form-group">
+      </div>
+      <h3> Students Without Balance</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Fees</th>
+        </tr>
+        <tr *ngFor="let student of students ">
+          <td>{{student.name }} </td>
+          <td>{{student.gender }}</td>
+          <td>{{student.age }}</td>
+          <td>{{student.fees }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noStudent>
+  <p>No Students</p>
+</ng-template>
