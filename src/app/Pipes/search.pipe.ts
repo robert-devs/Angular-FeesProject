@@ -4,20 +4,18 @@ import { Student } from '../inaterface/studentInterfaces';
 @Pipe({
   name: 'search',
 })
-export class FilterPipe implements PipeTransform {
+export class searchPipe implements PipeTransform {
   transform(value: Student[], name: string): Student[] {
-    if (value.length === 0 || name === '') {
+    if (value.length == 0 || name == '') {
       name = name.toLowerCase();
       return value;
     }
-    const student: Student[] = [];
+    const searched: Student[] = [];
     for (let students of value) {
-      if (
-        students.name.toLowerCase().indexOf(name.toLocaleLowerCase()) !== -1
-      ) {
-        student.push(students);
+      if (students.name.toLowerCase().indexOf(name.toLocaleLowerCase()) != -1) {
+        searched.push(students);
       }
     }
-    return student;
+    return searched;
   }
 }

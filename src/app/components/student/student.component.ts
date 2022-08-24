@@ -15,19 +15,11 @@ export class StudentsComponent implements OnInit {
   fees = 0;
 
   filter = '';
-  empty = false;
 
   constructor(private studentService: StudentsService) {}
 
   onSubmit(form: NgForm) {
-    console.log(form);
-
-    // if (this.name === '' || this.gender === '') {
-    //   // this.empty = true;
-    //   setTimeout(() => {
-    //     this.empty = false;
-    //   }, 1000);
-    // } else {
+    // console.log(form);
     this.studentService.addStudent({
       name: this.name,
       gender: this.gender,

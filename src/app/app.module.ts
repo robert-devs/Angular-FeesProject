@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { StudentsComponent } from './components/student/student.component';
 import { UserComponent } from './user/user.component';
+import { searchPipe } from './Pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserComponent } from './user/user.component';
     BalanceComponent,
     CompleteFeesComponent,
     UserComponent,
+    searchPipe,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],

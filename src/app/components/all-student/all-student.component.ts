@@ -10,6 +10,8 @@ import { StudentsService } from 'src/app/Services/Students.service';
 export class AllStudentComponent implements OnInit {
   students!: Student[];
 
+  search = '';
+
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
