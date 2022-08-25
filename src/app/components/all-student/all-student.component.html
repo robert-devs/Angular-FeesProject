@@ -4,12 +4,15 @@
       <div class="form-group"></div>
       <h3>All Students ...</h3>
 
-      <input
-        class="filter"
-        type="text"
-        [(ngModel)]="search"
-        placeholder="Search ..."
-      />
+      <div>
+        <input
+          class="filter"
+          type="text"
+          [(ngModel)]="listFilter"
+          placeholder="Search ..."
+        />
+        <!-- <p>{{ listFilter }}</p> -->
+      </div>
       <table>
         <tr>
           <th>Name</th>
@@ -17,11 +20,11 @@
           <th>Age</th>
           <th>Fees</th>
         </tr>
-        <tr *ngFor="let student of students">
+        <tr *ngFor="let student of filteredStudents">
           <td>{{ student.name }}</td>
           <td>{{ student.gender }}</td>
           <td>{{ student.age }}</td>
-          <td>{{ student.fees }}</td>
+          <td>{{ student.fees | currency }}</td>
         </tr>
       </table>
     </div>
